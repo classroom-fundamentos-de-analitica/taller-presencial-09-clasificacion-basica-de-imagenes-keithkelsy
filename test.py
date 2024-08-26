@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score
 digits = datasets.load_digits()
 data = digits.images.reshape((len(digits.images), -1))
 
-with open("estimator.pickle", "rb") as file:
+with open("estimator.pkl", "rb") as file:
     new_clf = pickle.load(file)
 
 accuracy = accuracy_score(
